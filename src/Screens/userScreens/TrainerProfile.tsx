@@ -382,7 +382,7 @@ const TrainerProfile = ({route}) => {
                     style={{
                       ...styles.curve,
                       borderRadius: responsiveWidth(10),
-                      backgroundColor: checkFollowed?.follow.includes(data?._id)
+                      backgroundColor: checkFollowed?.follow?.includes(data?._id)
                         ? '#d7d7d7'
                         : '#9FED3A',
                       marginBottom: responsiveHeight(1),
@@ -390,7 +390,7 @@ const TrainerProfile = ({route}) => {
                     <Text style={styles.blacktext}>
                       {loadingFollow
                         ? 'Waiting...'
-                        : checkFollowed?.follow.includes(data?._id)
+                        : checkFollowed?.follow?.includes(data?._id)
                         ? 'Following'
                         : 'Follow +'}
                     </Text>
@@ -398,7 +398,7 @@ const TrainerProfile = ({route}) => {
                   <Text
                     style={{fontSize: responsiveFontSize(1.8), color: 'white'}}>
                     {data?.followers?.length > 0
-                      ? checkFollowed?.follow.length
+                      ? checkFollowed?.follow?.length
                       : 0}
                   </Text>
                   <Text

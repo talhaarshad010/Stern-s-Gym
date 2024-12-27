@@ -429,7 +429,7 @@ const Home: React.FC<Props> = ({navigation, route}) => {
                             : handleUnFollow(item);
                         }}
                         style={{
-                          backgroundColor: checkFollowed?.follow.includes(
+                          backgroundColor: checkFollowed?.follow?.includes(
                             item?._id
                           )
                             ? '#d7d7d7'
@@ -451,7 +451,7 @@ const Home: React.FC<Props> = ({navigation, route}) => {
                           }}>
                           {loadingFollow
                             ? 'waiting...'
-                            : checkFollowed?.follow.includes(item?._id)
+                            : checkFollowed?.follow?.includes(item?._id)
                             ? 'Following'
                             : 'Follow'}
                         </Text>
